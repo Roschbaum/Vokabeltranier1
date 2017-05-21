@@ -9,32 +9,35 @@ import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
+
 /**
  *
  * @author Friedrich
  */
 public class SControlerTest {
-    
+
     SControler instance;
+
     public SControlerTest() {
         instance = new SControler();
     }
-    
+
     @BeforeClass
     public static void setUpClass() {
     }
-    
+
     @AfterClass
     public static void tearDownClass() {
     }
-    
+
     @Before
     public void setUp() {
     }
-    
+
     @After
     public void tearDown() {
     }
@@ -50,7 +53,8 @@ public class SControlerTest {
         String nBedeutung = "gehen";
         boolean vokabelkasten = true;
         boolean heufig = true;
-        instance.erstelleVokabel(nName, nZusatsangaben, nBedeutung, vokabelkasten, heufig);        
+        instance.erstelleVokabel(nName, nZusatsangaben, nBedeutung, vokabelkasten, heufig);
+        Assume.assumeTrue(true);
     }
 
     /**
@@ -118,6 +122,4 @@ public class SControlerTest {
         fail("The test case is a prototype.");
     }
 
-   
-    
 }
