@@ -1,3 +1,5 @@
+package vokabeltrainer;
+
 import javafx.application.Application;
 import javafx.application.Platform;
 import javafx.scene.Scene;
@@ -16,7 +18,7 @@ public class ViewVokTrainer extends Application
     			applicationBeenden();
     		});
 		StackPane layout = new StackPane();
-		Scene scene = new Scene(layout, 1000, 1000);
+		Scene scene = new Scene(layout, 500, 100);
 		primaryStage.setTitle("Vokabeltrainer");
 		primaryStage.setScene(scene);
 		primaryStage.show();
