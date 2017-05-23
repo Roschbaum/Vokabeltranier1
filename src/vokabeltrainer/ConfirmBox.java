@@ -1,3 +1,5 @@
+package vokabeltrainer;
+
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,9 +16,9 @@ public class ConfirmBox{
 		secundaryStage.initModality(Modality.APPLICATION_MODAL);
 		Button yesButton = new Button("Ja   ");
 		yesButton.setOnAction(e -> {
-			antwort = true;
-			secundaryStage.close();
-		});
+                    antwort = true;
+                    secundaryStage.close();
+                });
 		Button noButton = new Button("Nein");
 		noButton.setOnAction(e -> {
 			antwort = false;
