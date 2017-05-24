@@ -1,3 +1,5 @@
+package vokabeltrainer;
+
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -16,18 +18,21 @@ public class ConfirmBox{
 		secundaryStage.setTitle("Wiedersehen");
 		secundaryStage.setOnCloseRequest(e -> e.consume());
 		secundaryStage.initModality(Modality.APPLICATION_MODAL);
+		//Ja-Button
 		Button yesButton = new Button("Ja   ");
 		yesButton.setOnAction(e -> {
 			antwort = true;
 			secundaryStage.close();
 		});
+		//Nein-Button
 		Button noButton = new Button("Nein");
 		noButton.setOnAction(e -> {
 			antwort = false;
 			secundaryStage.close();
 		});
 		Label label = new Label("Wollen sie das Programm wirklich beenden?");
-		
+	
+		//Nebenlayout, dass Ja- und Neinbutton in das Hauptlayout einfügen. Rein aus Optik.
 		HBox layout2 = new HBox();
 		HBox.setHgrow(yesButton, Priority.ALWAYS);
 	    HBox.setHgrow(noButton, Priority.ALWAYS);
@@ -35,14 +40,13 @@ public class ConfirmBox{
 	    noButton.setMaxWidth(Double.MAX_VALUE);
 	    layout2.getChildren().addAll(noButton, yesButton);
 		
+	    //Hauptlayout
 	    GridPane layout = new GridPane();
-		layout.setPadding(new Insets(25, 25, 25, 25));
+	    GridPane.setConstraints(label,0,0);
+		GridPane.setConstraints(layout2,0,1);layout.setPadding(new Insets(25, 25, 25, 25));
 		layout.setHgap(10);
 		layout.setVgap(10);
 		layout.getChildren().addAll(label,layout2);
-
-		GridPane.setConstraints(label,0,0);
-		GridPane.setConstraints(layout2,0,1);
 		
 		Scene scene = new Scene(layout,325,100);
 		secundaryStage.setScene(scene);
@@ -50,3 +54,4 @@ public class ConfirmBox{
 		return (antwort);
 	}
 }
+
