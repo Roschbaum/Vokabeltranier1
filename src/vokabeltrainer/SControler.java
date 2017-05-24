@@ -11,15 +11,11 @@ import java.util.ArrayList;
  * @author Friedrich
  */
 public class SControler extends aControler implements Serializable {
-    
+
     private Einlese mEinlese;
-    
     private Speichern mSpeicher;
-    
     private ArrayList<Vokabelkasten> mKasten;
-    
     private View mView;
-    
     private Vokabelliste mVokabelliste;
 
     public SControler() {
@@ -39,7 +35,7 @@ public class SControler extends aControler implements Serializable {
         mSpeicher = new Speichern();
         addVokabelkasten("Haubtvokabelkasten");
     }
-    
+
     private void addVokabelkasten(String mName) {
         mKasten.add(new Vokabelkasten(mName, this));
     }
@@ -135,7 +131,7 @@ public class SControler extends aControler implements Serializable {
                 return zeichneZusatzangaben(v);
         }
     }
-    
+
     private int bestimmeVokabelfach(int anzahl) {
         warteAufEvent();
         if (cmd.startsWith("vokabelfach")) {
@@ -149,7 +145,7 @@ public class SControler extends aControler implements Serializable {
         }
         return -1;
     }
-    
+
     private int bestimmeVokabelkasten() {
         warteAufEvent();
         if (cmd.startsWith("vokabelkasten")) {
@@ -161,7 +157,7 @@ public class SControler extends aControler implements Serializable {
         }
         return -1;
     }
-    
+
     private void einfuegen() {
         mView.zeichneEinfuegen();
         warteAufEvent();
@@ -182,21 +178,21 @@ public class SControler extends aControler implements Serializable {
                 break;
         }
     }
-    
+
     private void einlesen() {
     }
-    
+
     private void erstelleVokabel() {
-        
+
     }
-    
+
     private void erstelleVokabelfach() {
     }
-    
+
     private void erstelleVokabelkasten() {
-        
+
     }
-    
+
     private void hoereAb() {
         boolean mUnterbtochen;
         Vokabelkasten lVokabelkasten = (Vokabelkasten) mKasten.get(bestimmeVokabelkasten());
@@ -207,13 +203,13 @@ public class SControler extends aControler implements Serializable {
             mView.zeige("bestimmen sie die naeste Aktion, die ausgefuert werden soll");
         }
     }
-    
+
     private void loescheVokabel() {
     }
-    
+
     private void loescheVokabelfach() {
     }
-    
+
     private void loeschen() {
         mView.zeichneLoeschen();
         warteAufEvent();
