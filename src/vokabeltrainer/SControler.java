@@ -181,7 +181,6 @@ public class SControler extends aControler implements Serializable {
 
     private void erstelleVokabel() {
         VokabelErstellen erstellen = new VokabelErstellen();
-        erstellen.erstelleVokabeleingabe();
         String name = erstellen.getEingabeName();
         String zuastzangaben = erstellen.getEingabeZusatzangaben();
         String bedeutung = erstellen.getEingabeBedeutung();
@@ -205,7 +204,6 @@ public class SControler extends aControler implements Serializable {
 
     private void erstelleVokabelkasten() {
         ErselleKasten erselleKasten = new ErselleKasten();
-        erselleKasten.erselleVokablekastenfenster();
         String name = erselleKasten.getNameVokabelkasten();
          if (erselleKasten.getEingabeRichtig()) {
              mKasten.add(new Vokabelkasten(name, this));

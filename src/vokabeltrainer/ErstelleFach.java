@@ -6,13 +6,16 @@
 package vokabeltrainer;
 
 /**
- *  Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die Erstellung eines Vokabelfaches nötig sind.
+ * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
+ * Erstellung eines Vokabelfaches nötig sind.
+ *
  * @author Friedrich
  */
 public class ErstelleFach {
 
     /**
-     * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese, Registrierd ob die Eingabe richtig ist.
+     * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese,
+     * Registrierd ob die Eingabe richtig ist.
      */
     public ErstelleFach() {
     }
@@ -25,7 +28,8 @@ public class ErstelleFach {
     }
 
     /**
-     *  Gibt zurück ob die Eingabe korrekt zuendegeführt worden ist.
+     * Gibt zurück ob die Eingabe korrekt zuendegeführt worden ist.
+     *
      * @return ergebnis
      */
     public boolean getEingabeRichtig() {
@@ -33,7 +37,8 @@ public class ErstelleFach {
     }
 
     /**
-     *  Bigt den Namen des neuen Vokabelfaches wieder.
+     * Bigt den Namen des neuen Vokabelfaches wieder.
+     *
      * @return
      */
     public String getVokabelFachName() {

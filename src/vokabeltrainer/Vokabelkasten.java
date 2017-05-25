@@ -5,11 +5,12 @@ import java.util.TreeMap;
 
 /**
  * Stellt einen Vokabelkaste dar.
+ *
  * @author Friedrich
  */
 public class Vokabelkasten implements Serializable {
 
-    private TreeMap<Integer,Vokabelfach> faecher;
+    private TreeMap<Integer, Vokabelfach> faecher;
 
     private String name;
 
@@ -17,6 +18,7 @@ public class Vokabelkasten implements Serializable {
 
     /**
      * Erzeugt einen Vokabelkasten.
+     *
      * @param name Name des neuen Vokabelkasten.
      * @param mSControler Contoler des Neuen vokabelkastens.
      */
@@ -31,6 +33,7 @@ public class Vokabelkasten implements Serializable {
 
     /**
      * Gibt den Namen des Kastens wieder.
+     *
      * @return
      */
     public String getName() {
@@ -39,6 +42,7 @@ public class Vokabelkasten implements Serializable {
 
     /**
      * Bestimmt den Namen des Kastens.
+     *
      * @param name
      */
     public void setName(String name) {
@@ -47,14 +51,16 @@ public class Vokabelkasten implements Serializable {
 
     /**
      * Erzeugt eien neues Fachh im Vokabelkasten.
-     * @param name Name des neuen Fachs 
+     *
+     * @param name Name des neuen Fachs
      */
     public void erzeugeFach(String name) {
-        faecher.put(faecher.size(),new Vokabelfach(name));
+        faecher.put(faecher.size(), new Vokabelfach(name));
     }
 
     /**
      * Entvernt das Vokabelfach mit der zugehörigen nummer.
+     *
      * @param stelle
      */
     public void loescheFach(int stelle) {
@@ -62,8 +68,9 @@ public class Vokabelkasten implements Serializable {
     }
 
     /**
-     *  fügt eine Vokabel in einen Fach ein.
-     * @param vokabel 
+     * fügt eine Vokabel in einen Fach ein.
+     *
+     * @param vokabel
      * @param fach
      */
     public void fuegeVokabelEin(Vokabel vokabel, int fach) {
@@ -100,13 +107,13 @@ public class Vokabelkasten implements Serializable {
             return false;
         }
         int richtig = mSControler.geKont(lFach.naechsteVokabelausgeben());
-        switch(richtig) {
+        switch (richtig) {
             case 1:
                 Vokabelfach rFach = (Vokabelfach) faecher.get(fach - 1);
                 rFach.fuegeVokabelEin(lFach.naechsteVokabel());
                 return hoereAb(fach);
             case -1:
-                if (faecher.size()> fach) {
+                if (faecher.size() > fach) {
                     Vokabelfach kFach = (Vokabelfach) faecher.get(fach + 1);
                     kFach.fuegeVokabelEin(lFach.naechsteVokabel());
                 } else {

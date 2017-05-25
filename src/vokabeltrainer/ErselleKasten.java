@@ -6,29 +6,43 @@
 package vokabeltrainer;
 
 /**
+ * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
+ * Erstellung eines Vokabelfaches nötig sind.
  *
  * @author Friedrich
  */
 public class ErselleKasten {
 
+    /**
+     * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
+     * Erstellung eines Vokabelkastens nötig sind.
+     */
     public ErselleKasten() {
     }
 
-    void close() {
+    /**
+     * Schließt das Eingabefenster,
+     */
+    public void close() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    void erselleVokablekastenfenster() {
+    /**
+     * Gibt an ob die Eingabe korrekt verlaufen ist.
+     *
+     * @return
+     */
+    public boolean getEingabeRichtig() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    boolean getEingabeRichtig() {
+    /**
+     * Gibt den Namen des Neuen Vokabelkasten zurück.
+     *
+     * @return
+     */
+    public String getNameVokabelkasten() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    String getNameVokabelkasten() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    
 }

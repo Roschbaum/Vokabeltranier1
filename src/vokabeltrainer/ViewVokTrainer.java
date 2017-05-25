@@ -9,7 +9,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
-public class ViewVokTrainer extends Application implements Serializable{
+public class ViewVokTrainer extends Application implements Serializable {
 
     public static void main(String[] args) {
         launch(args);
