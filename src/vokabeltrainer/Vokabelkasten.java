@@ -11,9 +11,7 @@ import java.util.TreeMap;
 public class Vokabelkasten implements Serializable {
 
     private TreeMap<Integer, Vokabelfach> faecher;
-
     private String name;
-
     private SControler mSControler;
 
     /**
@@ -79,17 +77,18 @@ public class Vokabelkasten implements Serializable {
     }
 
     /**
+     * Gibt die nachste Vokabel aus dem Vokabelfach aus, das fach Entspricht und
+     * entfernt diese Aus dem Vokabelfach.
      *
-     * @param fach
-     * @return
+     * @param fach Nummer des Faches
+     * @return Vokabel 
      */
     public Vokabel gibVokabelAusFach(int fach) {
-        Vokabelfach lVokabelfach = (Vokabelfach) faecher.get(fach);
-        return lVokabelfach.naechsteVokabel();
+        return faecher.get(fach).naechsteVokabel();
     }
 
     /**
-     *
+     * Gibt die Lönge
      * @return
      */
     public int getLaenge() {

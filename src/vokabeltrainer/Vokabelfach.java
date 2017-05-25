@@ -66,6 +66,6 @@ public class Vokabelfach implements Serializable {
      * @return
      */
     public Vokabel naechsteVokabel() {
-        return (Vokabel) mVokabelliste.removeFirst();
+        return  mVokabelliste.removeFirst();
     }
 }

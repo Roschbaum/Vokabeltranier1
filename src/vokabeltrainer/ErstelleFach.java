@@ -37,7 +37,7 @@ public class ErstelleFach {
     }
 
     /**
-     * Bigt den Namen des neuen Vokabelfaches wieder.
+     * Gibt den Namen des neuen Vokabelfaches wieder.
      *
      * @return
      */
