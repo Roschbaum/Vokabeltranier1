@@ -213,10 +213,10 @@ public class SControler extends aControler implements Serializable {
     private void erstelleVokabelkasten() {
         ErselleKasten erselleKasten = new ErselleKasten();
         String name = erselleKasten.getNameVokabelkasten();
-         if (erselleKasten.getEingabeRichtig()) {
-             mKasten.add(new Vokabelkasten(name, this));
-         }
-         erselleKasten.close();
+        if (erselleKasten.getEingabeRichtig()) {
+            mKasten.add(new Vokabelkasten(name, this));
+        }
+        erselleKasten.close();
     }
 
     private void hoereAb() {
@@ -240,16 +240,16 @@ public class SControler extends aControler implements Serializable {
         mView.zeichneLoeschen();
         warteAufEvent();
         switch (cmd) {
-            case "exit":
+            case "loescheexit":
                 mSpeicher.speichern(mView);
                 exit(0);
-            case "vokabelkasten":
+            case "loeschevokabelkasten":
                 loescheVokabelkasten();
                 break;
-            case "vokabelfach":
+            case "loeschevokabelfach":
                 loescheVokabelfach();
                 break;
-            case "vokabel":
+            case "loeschevokabel":
                 loescheVokabel();
                 break;
             default:
@@ -270,13 +270,12 @@ public class SControler extends aControler implements Serializable {
             case "abhoeren":
                 hoereAb();
                 break;
-            case "einfuegen":
-                einfuegen();
-                break;
-            case "loeschen":
-                loeschen();
-                break;
             default:
+                if (cmd.startsWith("loesche")) {
+                    loeschen();
+                } else if (cmd.startsWith("erstelle")) {
+                    einfuegen();
+                }
                 break;
         }
     }
