@@ -183,7 +183,7 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void erstelleVokabel() {
-
+//        erstelleVokabel(name, zuastzangaben, bdeutung, true, true);
     }
 
     private void erstelleVokabelfach() {
