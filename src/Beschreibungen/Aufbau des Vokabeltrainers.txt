@@ -1,0 +1,33 @@
+Aufbau des Vokabeltrainers:
+Situation nach dem Öffnen der Java Executebel:
+Toolbar: 
+•	Löschen :
+o	Lösche Vokabelkasten: AktionEvent: löscheVokabelkasten
+o	Lösche Vokabelfach: AktionEvent: löscheVokabelfach
+o	Lösche Vokabel: AktionEvent: löscheVokabel
+•	Erstellen
+o	Erstelle Vokabel: AktionEvent: erstelleVokabel
+o	Erstelle Vokabelfach: AktionEvent: erstelleVokabelfach
+o	Erstelle Vokabelkasten: AktionEvent: erstelleVokabelkasten
+•	Abhören:
+o	Vokabelkasten + name des Kasten	Öffnen eines Untermenüs zum Auswählen des Vokabelfaches  
+o	.
+o	.
+o	.
+•	Statistiken
+Eingabefeld um eine Vokabel zu suchen 
+Situation während des Abhörens:
+
+•	Durchgehend ein Botton der das Abhöhren beendet: Actionevent: abbrechen 
+•	Anzeigefeld für die Vokabel  
+•	Botton für die Zusatzangaben Aufschrift im Wechsel mit dem Anklicken: Zusatzangaben anzeigen / Zusatzangaben der Vokabel
+•	Botton für die Vokabelbedeutung Aufschrift im Wechsel mit dem Anklicken: Bedeutung anzeigen / Bedeutung der Vokabel
+•	Botton richtig:
+
+Neue Fenster mit höherer Priorität für:
+o	Lösche Vokabelkasten
+o	Lösche Vokabelfach
+o	Lösche Vokabel
+o	Erstelle Vokabel
+o	Erstelle Vokabelfach
+o	Erstelle Vokabelkasten
