@@ -180,35 +180,38 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void erstelleVokabel() {
-        mView.erstelleVokabeleingabe();
-        String name = mView.getEingabeName();
-        String zuastzangaben = mView.getEingabeZusatzangaben();
-        String bedeutung = mView.getEingabeBedeutung();
-        boolean vokabelkasten = mView.getBooleanVokabelkasten();
-        boolean heufig = mView.getBooleanHeufig();
-        if (mView.getEingabeRichtig()) {
+        VokabelErstellen erstellen = new VokabelErstellen();
+        erstellen.erstelleVokabeleingabe();
+        String name = erstellen.getEingabeName();
+        String zuastzangaben = erstellen.getEingabeZusatzangaben();
+        String bedeutung = erstellen.getEingabeBedeutung();
+        boolean vokabelkasten = erstellen.getBooleanVokabelkasten();
+        boolean heufig = erstellen.getBooleanHeufig();
+        if (erstellen.getEingabeRichtig()) {
             erstelleVokabel(name, zuastzangaben, bedeutung, vokabelkasten, heufig);
         }
-        mView.closeVokabeleingabe();
+        erstellen.closeVokabeleingabe();
     }
 
     private void erstelleVokabelfach() {
-        mView.erstelleVokabelfacheingabe();
-        String name = mView.getVokabelFachName();
+        ErstelleFach erstelleFach = new ErstelleFach();
+        erstelleFach.erstelleVokabelfacheingabe();
+        String name = erstelleFach.getVokabelFachName();
         Vokabelkasten mVokabelkasten = bestimmeVokabelkasten();
-        if (mView.getEingabeRichtig()) {
+        if (erstelleFach.getEingabeRichtig()) {
             mVokabelkasten.erzeugeFach(name);
         }
-        mView.closeVokablfacheingabe();
+        erstelleFach.closeVokablfacheingabe();
     }
 
     private void erstelleVokabelkasten() {
-        mView.erselleVokablekastenfenster();
-        String name = mView.getNameVokabelkasten();
-         if (mView.getEingabeRichtig()) {
+        ErselleKasten erselleKasten = new ErselleKasten();
+        erselleKasten.erselleVokablekastenfenster();
+        String name = erselleKasten.getNameVokabelkasten();
+         if (erselleKasten.getEingabeRichtig()) {
              mKasten.add(new Vokabelkasten(name, this));
          }
-
+         erselleKasten.close();
     }
 
     private void hoereAb() {
