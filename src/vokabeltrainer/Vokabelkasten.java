@@ -25,7 +25,7 @@ public class Vokabelkasten implements Serializable {
         faecher = new TreeMap<>();
         this.mSControler = mSControler;
         for (int i = 0; i < 5; i++) {
-            erzeugeFach("" + i);
+            erzeugeFach("Fach Nummer " + i);
         }
     }
 

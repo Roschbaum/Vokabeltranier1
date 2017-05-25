@@ -49,11 +49,11 @@ public class SControler extends aControler implements Serializable {
      * @param vokabelkasten ist sie ineime,Vokabelkaseten zu fimden ?
      * @param heufig
      */
-    public void erstelleVokabel(String nName, String nZusatsangaben, String nBedeutung, boolean vokabelkasten, boolean heufig) {
+    private void erstelleVokabel(String nName, String nZusatsangaben, String nBedeutung, boolean vokabelkasten, boolean heufig) {
         Vokabel nVokabel = new Vokabel(nName, nZusatsangaben, nBedeutung, vokabelkasten, heufig);
         mVokabelliste.einfuegen(nVokabel);
         if (vokabelkasten) {
-            mKasten.get(bestimmeVokabelkasten()).fuegeVokabelEin(nVokabel, 0);
+            bestimmeVokabelkasten().fuegeVokabelEin(nVokabel, 0);
         }
     }
 
@@ -84,20 +84,17 @@ public class SControler extends aControler implements Serializable {
     }
 
     /**
-     * Löscht den vom #benutzer nochmzu bestimenden Vokabelkten.
+     * Löscht den vom Benutzer noch zu bestimenden Vokabelkasten.
      */
     public void loescheVokabelkasten() {
-        int m = bestimmeVokabelkasten();
-        if (m != -1) {
-            mKasten.remove(m);
-        } else {
-        }
+        Vokabelkasten m = bestimmeVokabelkasten();
+        mKasten.remove(m);
     }
 
     /**
-     * Zeigt die #bedeutung eier Vokabel wenn dies vom Benutzer verlagt wird.
+     * Zeigt die Bedeutung einer Vokabel wenn dies vom Benutzer verlagt wird.
      *
-     * @param v
+     * @param v Vokabel deren Bedeutung gezeichnet werden soll
      * @return
      */
     public int zeichneBedeutung(Vokabel v) {
@@ -114,7 +111,7 @@ public class SControler extends aControler implements Serializable {
     }
 
     /**
-     * Zeichnet die zusatzangaben einer Vokabel
+     * Zeichnet die Zusatzangaben einer Vokabel
      *
      * @param v
      * @return
@@ -146,16 +143,16 @@ public class SControler extends aControler implements Serializable {
         return -1;
     }
 
-    private int bestimmeVokabelkasten() {
+    private Vokabelkasten bestimmeVokabelkasten() {
         warteAufEvent();
         if (cmd.startsWith("vokabelkasten")) {
             for (int i = 0; i < mKasten.size(); i++) {
                 if (cmd.contains("" + (i))) {
-                    return i;
+                    return mKasten.get(i);
                 }
             }
         }
-        return -1;
+        return null;
     }
 
     private void einfuegen() {
@@ -183,19 +180,40 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void erstelleVokabel() {
-//        erstelleVokabel(name, zuastzangaben, bdeutung, true, true);
+        mView.erstelleVokabeleingabe();
+        String name = mView.getEingabeName();
+        String zuastzangaben = mView.getEingabeZusatzangaben();
+        String bedeutung = mView.getEingabeBedeutung();
+        boolean vokabelkasten = mView.getBooleanVokabelkasten();
+        boolean heufig = mView.getBooleanHeufig();
+        if (mView.getEingabeRichtig()) {
+            erstelleVokabel(name, zuastzangaben, bedeutung, vokabelkasten, heufig);
+        }
+        mView.closeVokabeleingabe();
     }
 
     private void erstelleVokabelfach() {
+        mView.erstelleVokabelfacheingabe();
+        String name = mView.getVokabelFachName();
+        Vokabelkasten mVokabelkasten = bestimmeVokabelkasten();
+        if (mView.getEingabeRichtig()) {
+            mVokabelkasten.erzeugeFach(name);
+        }
+        mView.closeVokablfacheingabe();
     }
 
     private void erstelleVokabelkasten() {
+        mView.erselleVokablekastenfenster();
+        String name = mView.getNameVokabelkasten();
+         if (mView.getEingabeRichtig()) {
+             mKasten.add(new Vokabelkasten(name, this));
+         }
 
     }
 
     private void hoereAb() {
         boolean mUnterbtochen;
-        Vokabelkasten lVokabelkasten = (Vokabelkasten) mKasten.get(bestimmeVokabelkasten());
+        Vokabelkasten lVokabelkasten = bestimmeVokabelkasten();
         mUnterbtochen = lVokabelkasten.hoereAb(bestimmeVokabelfach(lVokabelkasten.getLaenge()));
         if (mUnterbtochen) {
             mView.zeige("es sind keine Vokabeln mehr in dem Fach");
