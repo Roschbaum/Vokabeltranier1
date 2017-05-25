@@ -8,25 +8,26 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
-public class ViewVokTrainer extends Application
-{ 	
-	public static void main(String[] args){
-		launch(args);
-	}
-    public void start(Stage primaryStage) throws Exception{
-    	
-    	primaryStage.setOnCloseRequest(e->{
-    			e.consume();
-    			applicationBeenden();});
-    	applicationAnmelden();
+public class ViewVokTrainer extends Application {
+
+    public static void main(String[] args) {
+        launch(args);
+    }
+
+    public void start(Stage primaryStage) throws Exception {
+
+        primaryStage.setOnCloseRequest(e -> {
+            e.consume();
+            applicationBeenden();
+        });
+        applicationAnmelden();
 
         //Statistiken
         GridPane statistikenLayout = new GridPane();
-        Scene statistikScene = new Scene(statistikenLayout,0,0);
+        Scene statistikScene = new Scene(statistikenLayout, 0, 0);
         Button statistikButton = new Button("Statistiken");
-        statistikButton.setOnAction(e-> primaryStage.setScene(statistikScene));
-        
-        
+        statistikButton.setOnAction(e -> primaryStage.setScene(statistikScene));
+
         HBox layout1 = new HBox();
         HBox.setHgrow(statistikButton, Priority.ALWAYS);
         statistikButton.setMaxWidth(Double.MAX_VALUE);
@@ -34,42 +35,23 @@ public class ViewVokTrainer extends Application
         layout1.setStyle("-fx-background-image:url('file:///Users/MANU/Google%20Drive/Vokabeltrainer/src/image/1920x1080.jpg');");
         Scene scene = new Scene(layout1, 1000, 1000);
         Button showScene = new Button("Back <-");
-        showScene.setOnAction(e-> primaryStage.setScene(scene));
+        showScene.setOnAction(e -> primaryStage.setScene(scene));
         GridPane.setConstraints(showScene, 0, 0);
         statistikenLayout.getChildren().add(showScene);
-        
+
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
-        primaryStage.show();
-    }
-    
-    public void applicationBeenden(){
-    	Boolean antwort = ConfirmBox.anzeigen();
-   		if(antwort){
-   			System.exit(0);
-   		}
-    }
-    
-    public void applicationAnmelden(){
-    	PasswortBox.anzeigen();
-    }
-
-    public void start(Stage primaryStage) throws Exception {
-        primaryStage.setOnCloseRequest(e -> {
-            e.consume();
-            applicationBeenden();
-        });
-        StackPane layout = new StackPane();
-        Scene scene = new Scene(layout, 500, 100);
-        primaryStage.setTitle("Vokabeltrainer");
-        primaryStage.setScene(scene);
         primaryStage.show();
     }
 
     public void applicationBeenden() {
         Boolean antwort = ConfirmBox.anzeigen();
         if (antwort) {
-            Platform.exit();
+            System.exit(0);
         }
+    }
+
+    public void applicationAnmelden() {
+        PasswortBox.anzeigen();
     }
 }
