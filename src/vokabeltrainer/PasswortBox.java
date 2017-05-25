@@ -1,5 +1,6 @@
 package vokabeltrainer;
 
+import java.io.Serializable;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -13,7 +14,7 @@ import javafx.scene.layout.Priority;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class PasswortBox {
+public class PasswortBox implements Serializable{
 	public static void anzeigen(){
 		//Stage wird erstellt
 		Stage secundaryStage = new Stage();

@@ -1,5 +1,6 @@
 package vokabeltrainer;
 
+import java.io.Serializable;
 import javafx.geometry.Insets;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -10,7 +11,7 @@ import javafx.scene.layout.Priority;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
-public class ConfirmBox {
+public class ConfirmBox implements Serializable{
 
 	private static Boolean antwort;
 	public static boolean anzeigen(){

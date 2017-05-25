@@ -195,7 +195,6 @@ public class SControler extends aControler implements Serializable {
 
     private void erstelleVokabelfach() {
         ErstelleFach erstelleFach = new ErstelleFach();
-        erstelleFach.erstelleVokabelfacheingabe();
         String name = erstelleFach.getVokabelFachName();
         Vokabelkasten mVokabelkasten = bestimmeVokabelkasten();
         if (erstelleFach.getEingabeRichtig()) {
