@@ -1,9 +1,11 @@
-package vokabeltrainer;
+package vokabeltrainer.View;
 
 import static java.awt.BorderLayout.CENTER;
 import static java.awt.Color.WHITE;
 import java.io.Serializable;
 import javax.swing.*;
+import vokabeltrainer.Model.Vokabel;
+import vokabeltrainer.SControler;
 
 public class View extends JFrame implements Serializable {
 

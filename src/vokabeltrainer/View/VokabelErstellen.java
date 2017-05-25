@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vokabeltrainer;
+package vokabeltrainer.View;
 
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die

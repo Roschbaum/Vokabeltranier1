@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vokabeltrainer;
+package vokabeltrainer.View;
 
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
@@ -11,37 +11,37 @@ package vokabeltrainer;
  *
  * @author Friedrich
  */
-public class ErselleKasten {
+public class ErstelleFach {
 
     /**
-     * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
-     * Erstellung eines Vokabelkastens nötig sind.
+     * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese,
+     * Registrierd ob die Eingabe richtig ist.
      */
-    public ErselleKasten() {
+    public ErstelleFach() {
     }
 
     /**
-     * Schließt das Eingabefenster,
+     * Schließt das Eingabefenster.
      */
-    public void close() {
+    public void closeVokablfacheingabe() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
-     * Gibt an ob die Eingabe korrekt verlaufen ist.
+     * Gibt zurück ob die Eingabe korrekt zuendegeführt worden ist.
      *
-     * @return
+     * @return ergebnis
      */
     public boolean getEingabeRichtig() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
-     * Gibt den Namen des Neuen Vokabelkasten zurück.
+     * Gibt den Namen des neuen Vokabelfaches wieder.
      *
      * @return
      */
-    public String getNameVokabelkasten() {
+    public String getVokabelFachName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

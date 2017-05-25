@@ -1,4 +1,4 @@
-package vokabeltrainer;
+package vokabeltrainer.View;
 
 import java.io.Serializable;
 import javafx.application.Application;

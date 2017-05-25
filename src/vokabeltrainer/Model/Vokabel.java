@@ -1,4 +1,4 @@
-package vokabeltrainer;
+package vokabeltrainer.Model;
 
 import java.io.Serializable;
 

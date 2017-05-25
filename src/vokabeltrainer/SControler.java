@@ -4,6 +4,14 @@ import Speichern.Speichern;
 import java.io.Serializable;
 import static java.lang.System.exit;
 import java.util.ArrayList;
+import vokabeltrainer.Model.Einlese;
+import vokabeltrainer.Model.Vokabel;
+import vokabeltrainer.Model.Vokabelkasten;
+import vokabeltrainer.Model.Vokabelliste;
+import vokabeltrainer.View.ErselleKasten;
+import vokabeltrainer.View.ErstelleFach;
+import vokabeltrainer.View.View;
+import vokabeltrainer.View.VokabelErstellen;
 
 /**
  * Controllerklasse

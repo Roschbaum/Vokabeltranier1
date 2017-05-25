@@ -1,7 +1,8 @@
-package vokabeltrainer;
+package vokabeltrainer.Model;
 
 import java.io.Serializable;
 import java.util.TreeMap;
+import vokabeltrainer.SControler;
 
 /**
  * Stellt einen Vokabelkaste dar.

@@ -1,4 +1,4 @@
-package vokabeltrainer;
+package vokabeltrainer.Model;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -7,18 +7,19 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import static java.lang.System.out;
+import vokabeltrainer.View.View;
 
 public class Vokabeltrainer {
 
     private static final String datnam = "vokabeltrainer.ser";
 
-    private static vokabeltrainer.View view = null;
+    private static View view = null;
 
     public static void main(String[] args) {
         ObjectInputStream in = null;
         try {
             in = new ObjectInputStream(new FileInputStream(datnam));
-            view = (vokabeltrainer.View) in.readObject();
+            view = (View) in.readObject();
         } catch (FileNotFoundException ex) {
             out.println("Speichersdatei (noch) nicht vorhanden!");
         } catch (Exception ex) {
@@ -32,7 +33,7 @@ public class Vokabeltrainer {
             }
         }
         if (view == null) {
-            view = new vokabeltrainer.View();
+            view = new View();
         } else {
             view.fensterErstellen();
         }
