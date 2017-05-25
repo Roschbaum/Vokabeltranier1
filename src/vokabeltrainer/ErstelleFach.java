@@ -6,23 +6,37 @@
 package vokabeltrainer;
 
 /**
- *
+ *  Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die Erstellung eines Vokabelfaches nötig sind.
  * @author Friedrich
  */
 public class ErstelleFach {
 
+    /**
+     * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese, Registrierd ob die Eingabe richtig ist.
+     */
     public ErstelleFach() {
     }
 
-    void closeVokablfacheingabe() {
+    /**
+     * Schließt das Eingabefenster.
+     */
+    public void closeVokablfacheingabe() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    boolean getEingabeRichtig() {
+    /**
+     *  Gibt zurück ob die Eingabe korrekt zuendegeführt worden ist.
+     * @return ergebnis
+     */
+    public boolean getEingabeRichtig() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    String getVokabelFachName() {
+    /**
+     *  Bigt den Namen des neuen Vokabelfaches wieder.
+     * @return
+     */
+    public String getVokabelFachName() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
