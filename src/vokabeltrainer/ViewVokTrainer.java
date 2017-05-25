@@ -2,9 +2,10 @@ package vokabeltrainer;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
+import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
 public class ViewVokTrainer extends Application
@@ -16,25 +17,27 @@ public class ViewVokTrainer extends Application
     	
     	primaryStage.setOnCloseRequest(e->{
     			e.consume();
-    			applicationBeenden();
-    		});
+    			applicationBeenden();});
     	applicationAnmelden();
-		//MenubarTest
-        /*MenuBar menuBar = new MenuBar();
-        Menu menuFile = new Menu("File");
-        Menu menuEdit = new Menu("Edit");
-        Menu menuView = new Menu("View");
 
-        MenuItem menuItem = new MenuItem("Open");
-        menuItem.setGraphic(new ImageView(new Image("flower.png")));
-        menuBar.getMenus().addAll(menuFile, menuEdit, menuView);
-        */
-        Image image = new Image("file:///Users/MANU/Google%20Drive/Vokabeltrainer/src/image/1920x1080.jpg");
-        ImageView imageView = new ImageView(image);
-
-        HBox hbox = new HBox(imageView);
-
-        Scene scene = new Scene(hbox, 200, 100);
+        //Statistiken
+        GridPane statistikenLayout = new GridPane();
+        Scene statistikScene = new Scene(statistikenLayout,0,0);
+        Button statistikButton = new Button("Statistiken");
+        statistikButton.setOnAction(e-> primaryStage.setScene(statistikScene));
+        
+        
+        HBox layout1 = new HBox();
+        HBox.setHgrow(statistikButton, Priority.ALWAYS);
+        statistikButton.setMaxWidth(Double.MAX_VALUE);
+        layout1.getChildren().addAll(statistikButton);
+        layout1.setStyle("-fx-background-image:url('file:///Users/MANU/Google%20Drive/Vokabeltrainer/src/image/1920x1080.jpg');");
+        Scene scene = new Scene(layout1, 1000, 1000);
+        Button showScene = new Button("Back <-");
+        showScene.setOnAction(e-> primaryStage.setScene(scene));
+        GridPane.setConstraints(showScene, 0, 0);
+        statistikenLayout.getChildren().add(showScene);
+        
         primaryStage.setScene(scene);
         primaryStage.setMaximized(true);
         primaryStage.show();

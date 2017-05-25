@@ -22,12 +22,14 @@ public class PasswortBox {
 		secundaryStage.setOnCloseRequest(e -> e.consume());
 		//Benutzername
 		Label benutzernameLabel = new Label("Benutzername:");
+		benutzernameLabel.setStyle("-fx-text-fill: white;");
 		GridPane.setConstraints(benutzernameLabel, 0, 0);
 		TextField benutzernameTextfield = new TextField();
 		benutzernameTextfield.setPromptText("benutzername");
 		GridPane.setConstraints(benutzernameTextfield, 1, 0);
 		//Passwort
 		Label passwortLabel = new Label("Passwort:");
+		passwortLabel.setStyle("-fx-text-fill: white;");
 		GridPane.setConstraints(passwortLabel, 0, 1);
 		PasswordField passwortTextfield = new PasswordField();
 		passwortTextfield.setPromptText("passwort");
@@ -74,6 +76,7 @@ public class PasswortBox {
 		layout.getColumnConstraints().add(new ColumnConstraints(100));
 		layout.getColumnConstraints().add(new ColumnConstraints(200));
 		layout.getChildren().addAll(benutzernameLabel, benutzernameTextfield, passwortLabel, passwortTextfield, layout2);
+        layout.setStyle("-fx-background-color: #336699;");
 		
 		Scene scene = new Scene(layout,350,125);
 		secundaryStage.setScene(scene);
