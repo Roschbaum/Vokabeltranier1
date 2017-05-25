@@ -9,7 +9,6 @@ import org.junit.After;
 import org.junit.AfterClass;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
-import org.junit.Assume;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -40,21 +39,6 @@ public class SControlerTest {
 
     @After
     public void tearDown() {
-    }
-
-    /**
-     * Test of erstelleVokabel method, of class SControler.
-     */
-    @Test
-    public void testErstelleVokabel() {
-        System.out.println("erstelleVokabel");
-        String nName = "ire";
-        String nZusatsangaben = "eo; ii; itum";
-        String nBedeutung = "gehen";
-        boolean vokabelkasten = true;
-        boolean heufig = true;
-        instance.erstelleVokabel(nName, nZusatsangaben, nBedeutung, vokabelkasten, heufig);
-        Assume.assumeTrue(true);
     }
 
     /**
