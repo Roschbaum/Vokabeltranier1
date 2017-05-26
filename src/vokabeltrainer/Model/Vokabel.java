@@ -71,6 +71,18 @@ public class Vokabel implements Serializable {
         return bedeutung;
     }
 
+    public void setmName(String mName) {
+        this.mName = mName;
+    }
+
+    public void setBedeutung(String bedeutung) {
+        this.bedeutung = bedeutung;
+    }
+
+    public void setZusatsAngaben(String zusatsAngaben) {
+        this.zusatsAngaben = zusatsAngaben;
+    }
+
     /**
      * Gibt die zusazangaben der Vokabel zurück.
      *

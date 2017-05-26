@@ -231,6 +231,7 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void loescheVokabel() {
+        
     }
 
     private void loescheVokabelfach() {

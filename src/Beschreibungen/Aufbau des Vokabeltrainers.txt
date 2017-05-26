@@ -15,6 +15,10 @@ o	.
 o	.
 o	.
 �	Statistiken
+�       Bearbeiten:
+o       Bearbeite Vokabelkasten: AktionEvent: bearbeiteVokabelkasten
+o	Bearbeite Vokabelfach: AktionEvent: bearbeiteVokabelfach
+o	Bearbeite Vokabel: AktionEvent: bearbeiteVokabel
 Eingabefeld um eine Vokabel zu suchen 
 Situation waehrend des Abhaerens:
 

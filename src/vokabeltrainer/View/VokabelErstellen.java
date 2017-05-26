@@ -24,7 +24,7 @@ public class VokabelErstellen {
 
     /**
      * Erstellt die Eingabemöcklichkeiten um eine Vokabel zu Bearbeiten.
-     * @param vokabel
+     * @param vokabel 
      */
     public VokabelErstellen(Vokabel vokabel) {
         this.vokabel = vokabel;
