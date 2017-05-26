@@ -5,6 +5,8 @@
  */
 package vokabeltrainer.View;
 
+import vokabeltrainer.Model.Vokabelkasten;
+
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
  * Erstellung eines Vokabelfaches nötig sind.
@@ -13,11 +15,22 @@ package vokabeltrainer.View;
  */
 public class ErselleKasten {
 
+    private Vokabelkasten mVokabelkasten;
+
     /**
      * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
      * Erstellung eines Vokabelkastens nötig sind.
      */
     public ErselleKasten() {
+    }
+
+    /**
+     * Bietet die Möglichkeit einen Vokabelkasten zu bearbeiten
+     *
+     * @param mVokabel zu bearbeitender Vokabelkasten
+     */
+    public ErselleKasten(Vokabelkasten mVokabelkasten) {
+        this.mVokabelkasten = mVokabelkasten;
     }
 
     /**

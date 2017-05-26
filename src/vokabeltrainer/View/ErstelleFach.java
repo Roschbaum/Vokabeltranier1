@@ -5,6 +5,8 @@
  */
 package vokabeltrainer.View;
 
+import vokabeltrainer.Model.Vokabelfach;
+
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
  * Erstellung eines Vokabelfaches nötig sind.
@@ -13,11 +15,20 @@ package vokabeltrainer.View;
  */
 public class ErstelleFach {
 
+    Vokabelfach vokabelfach;
     /**
      * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese,
      * Registrierd ob die Eingabe richtig ist.
      */
     public ErstelleFach() {
+    }
+
+    /**
+     * Erstelt ein Fenster mit den Eingabemöcklichkeiten zur Bearbeitung eines Vokabelfaches
+     * @param vokabelfach zu bearbeitendes Vokabelfach.
+     */
+    public ErstelleFach(Vokabelfach vokabelfach) {
+        this.vokabelfach = vokabelfach;
     }
 
     /**

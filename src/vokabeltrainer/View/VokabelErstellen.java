@@ -5,6 +5,8 @@
  */
 package vokabeltrainer.View;
 
+import vokabeltrainer.Model.Vokabel;
+
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
  * Erstellung einer Vokabel nötig sind.
@@ -12,12 +14,20 @@ package vokabeltrainer.View;
  * @author Friedrich
  */
 public class VokabelErstellen {
-
+    Vokabel vokabel;
     /**
      * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese,
      * Registrierd ob die Eingabe richtig ist.
      */
     public VokabelErstellen() {
+    }
+
+    /**
+     * Erstellt die Eingabemöcklichkeiten um eine Vokabel zu Bearbeiten.
+     * @param vokabel
+     */
+    public VokabelErstellen(Vokabel vokabel) {
+        this.vokabel = vokabel;
     }
 
     /**
