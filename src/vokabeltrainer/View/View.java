@@ -63,12 +63,6 @@ public class View extends JFrame implements Serializable {
     public void zeige(String es_sind_keine_Vokabeln_mehr_in_dem_Fach) {
     }
 
-    public void zeichneEinfuegen() {
-    }
-
-    public void zeichneLoeschen() {
-    }
-
     public void fensterErstellen() {
         richteFrameEin();
         richteMenuBarein();

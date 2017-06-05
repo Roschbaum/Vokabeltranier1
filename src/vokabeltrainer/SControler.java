@@ -4,14 +4,8 @@ import Speichern.Speichern;
 import java.io.Serializable;
 import static java.lang.System.exit;
 import java.util.ArrayList;
-import vokabeltrainer.Model.Einlese;
-import vokabeltrainer.Model.Vokabel;
-import vokabeltrainer.Model.Vokabelkasten;
-import vokabeltrainer.Model.Vokabelliste;
-import vokabeltrainer.View.ErselleKasten;
-import vokabeltrainer.View.ErstelleFach;
-import vokabeltrainer.View.View;
-import vokabeltrainer.View.VokabelErstellen;
+import vokabeltrainer.Model.*;
+import vokabeltrainer.View.*;
 
 /**
  * Controllerklasse
@@ -46,6 +40,18 @@ public class SControler extends aControler implements Serializable {
 
     private void addVokabelkasten(String mName) {
         mKasten.add(new Vokabelkasten(mName, this));
+    }
+
+    private void bearbeiten() {
+        switch (cmd) {
+            case "bearbeiteVokabelkasten":
+                ErselleKasten erselleKasten = new ErselleKasten();
+                break;
+            case "bearbeiteVokabelfach":
+                break;
+            case "bearbeiteVokabel":
+                break;
+        }
     }
 
     /**
@@ -164,7 +170,6 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void einfuegen() {
-        mView.zeichneEinfuegen();
         warteAufEvent();
         switch (cmd) {
             case "vokabelkasten":
@@ -231,14 +236,13 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void loescheVokabel() {
-        
+
     }
 
     private void loescheVokabelfach() {
     }
 
     private void loeschen() {
-        mView.zeichneLoeschen();
         warteAufEvent();
         switch (cmd) {
             case "loescheexit":
@@ -276,6 +280,9 @@ public class SControler extends aControler implements Serializable {
                     loeschen();
                 } else if (cmd.startsWith("erstelle")) {
                     einfuegen();
+
+                } else if (cmd.startsWith("bearbeite")) {
+                    bearbeiten();
                 }
                 break;
         }

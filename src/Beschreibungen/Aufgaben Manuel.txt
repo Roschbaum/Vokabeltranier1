@@ -1,5 +1,5 @@
 Programiere die Toolbar 
 Setze die Entsprechenden AtionLisener
 Programiere die Erstellenfenster
-Programiere das Abhöhren
-Programiere die Löschenfenster
+Programiere das AbhÃ¶hren
+Programiere die LÃ¶schenfenster
