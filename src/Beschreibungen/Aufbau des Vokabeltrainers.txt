@@ -1,5 +1,5 @@
 Aufbau des Vokabeltrainers:
-Situation nach dem �ffnen der Java Executebel:
+Situation nach dem Öffnen der Java Executebel:
 Toolbar: 
 �	Lösche :
 o	Lösche Vokabelkasten: AktionEvent: loescheVokabelkasten
@@ -36,3 +36,8 @@ o	Lösche Vokabel
 o	Erstelle Vokabel
 o	Erstelle Vokabelfach
 o	Erstelle Vokabelkasten
+
+Funktionsweise der Serilisation im Bezug deiner View Manuel:
+� Deine View erzeugt einen Controler. Dieser Controler muss erzeugt werden, wenn man die Javaexecutebel zum ersten mal startet.
+    Bei jedem weiteren mal wird der alte Controler der View beim Start übergeben, sodass keine neuen Controler erzeugt wird. 
+    Anschließend muss die View die View beim Controler als neue View setzen.

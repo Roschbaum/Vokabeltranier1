@@ -1,3 +1,4 @@
+Passe wenn nötig die Actionlisener Structur in den Controlern und in Vokabelkasten an javafx an.
 Programiere die Toolbar 
 Setze die Entsprechenden AtionLisener
 Programiere die Erstellenfenster
