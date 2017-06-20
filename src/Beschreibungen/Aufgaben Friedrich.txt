@@ -1,0 +1,3 @@
+Vertigstellen der Controler der Löschen und Erstellen Fenster
+Überprüfen der Programmstruktur
+Schreiben einer Einlese und Ausgabe

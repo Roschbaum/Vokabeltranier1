@@ -5,10 +5,18 @@
  */
 package vokabeltrainer.View;
 
+import vokabeltrainer.Model.Vokabelliste;
+
 /**
  *
  * @author Friedrich
  */
 public class LöscheKasten {
-    
+
+    private Vokabelliste vokabelliste;
+
+    public LöscheKasten(Vokabelliste vokabelliste) {
+        this.vokabelliste = vokabelliste;
+    }
+
 }

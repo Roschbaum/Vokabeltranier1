@@ -18,12 +18,13 @@ public class ErselleKasten {
     private Vokabelliste vokabelliste;
 
     /**
-     *  Erstellt ein Fenster in dem ein Vokabel Kasten erstellt werden oder Bearbeitet werden kann.
+     * Erstellt ein Fenster in dem ein Vokabel Kasten erstellt werden oder
+     * Bearbeitet werden kann.
+     *
      * @param vokabelliste
      */
     public ErselleKasten(Vokabelliste vokabelliste) {
         this.vokabelliste = vokabelliste;
     }
-    
 
 }

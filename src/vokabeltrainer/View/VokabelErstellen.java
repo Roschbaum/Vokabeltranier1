@@ -18,7 +18,8 @@ public class VokabelErstellen {
     private Vokabelliste vokabelliste;
 
     /**
-     * Erstellt eiene Vokabelbeaarbeitenfenter, in dem mn eine Vokabel entweder berbeiten oder erstellen kann
+     * Erstellt eiene Vokabelbeaarbeitenfenter, in dem mn eine Vokabel entweder
+     * berbeiten oder erstellen kann
      *
      * @param vokabelliste
      * @param aktivitaet

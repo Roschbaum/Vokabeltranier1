@@ -42,37 +42,6 @@ public class SControler extends aControler implements Serializable {
         mKasten.add(new Vokabelkasten(mName, this));
     }
 
-    private void bearbeiten() {
-        switch (cmd) {
-            case "bearbeiteVokabelkasten":
-                erstelleVokabelkasten();
-                break;
-            case "bearbeiteVokabelfach":
-                erstelleVokabelfach();
-                break;
-            case "bearbeiteVokabel":
-                erstelleVokabel();
-                break;
-        }
-    }
-
-    /**
-     * Erstellt eine Vokabel
-     *
-     * @param nName
-     * @param nZusatsangaben
-     * @param nBedeutung
-     * @param vokabelkasten ist sie ineime,Vokabelkaseten zu fimden ?
-     * @param heufig
-     */
-    private void erstelleVokabel(String nName, String nZusatsangaben, String nBedeutung, boolean vokabelkasten, boolean heufig) {
-        Vokabel nVokabel = new Vokabel(nName, nZusatsangaben, nBedeutung, vokabelkasten, heufig);
-        mVokabelliste.einfuegen(nVokabel);
-        if (vokabelkasten) {
-            bestimmeVokabelkasten().fuegeVokabelEin(nVokabel, 0);
-        }
-    }
-
     /**
      * Berurteilt ob eine Vokabel gekot wurde.
      *
@@ -103,8 +72,7 @@ public class SControler extends aControler implements Serializable {
      * Löscht den vom Benutzer noch zu bestimenden Vokabelkasten.
      */
     public void loescheVokabelkasten() {
-        Vokabelkasten m = bestimmeVokabelkasten();
-        mKasten.remove(m);
+        new LöscheKasten(mVokabelliste);
     }
 
     /**
@@ -145,6 +113,7 @@ public class SControler extends aControler implements Serializable {
         }
     }
 
+    //Auslagern ?
     private int bestimmeVokabelfach(int anzahl) {
         warteAufEvent();
         if (cmd.startsWith("vokabelfach")) {
@@ -159,6 +128,7 @@ public class SControler extends aControler implements Serializable {
         return -1;
     }
 
+    //Auslagern ?
     private Vokabelkasten bestimmeVokabelkasten() {
         warteAufEvent();
         if (cmd.startsWith("vokabelkasten")) {
@@ -172,19 +142,18 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void einfuegen() {
-        warteAufEvent();
         switch (cmd) {
-            case "vokabelkasten":
+            case "erstellevokabelkasten":
+            case "bearbeitevokabelkasten":
                 erstelleVokabelkasten();
                 break;
-            case "vokabelfach":
+            case "erstellevokabelfach":
+            case "bearbeitevokabelfach":
                 erstelleVokabelfach();
                 break;
-            case "vokabel":
+            case "erstellevokabel":
+            case "bearbeitevokabel":
                 erstelleVokabel();
-                break;
-            case "einlesen":
-                einlesen();
                 break;
             default:
                 break;
@@ -219,14 +188,14 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void loescheVokabel() {
-
+        new LöscheVokabel();
     }
 
     private void loescheVokabelfach() {
+        new LöscheFach(mVokabelliste);
     }
 
     private void loeschen() {
-        warteAufEvent();
         switch (cmd) {
             case "loescheexit":
                 mSpeicher.speichern(mView);
@@ -258,14 +227,14 @@ public class SControler extends aControler implements Serializable {
             case "abhoeren":
                 hoereAb();
                 break;
+            case "einlesen":
+                einlesen();
+                break;
             default:
                 if (cmd.startsWith("loesche")) {
                     loeschen();
-                } else if (cmd.startsWith("erstelle")) {
+                } else if (cmd.startsWith("erstelle") || cmd.startsWith("bearbeite")) {
                     einfuegen();
-
-                } else if (cmd.startsWith("bearbeite")) {
-                    bearbeiten();
                 }
                 break;
         }

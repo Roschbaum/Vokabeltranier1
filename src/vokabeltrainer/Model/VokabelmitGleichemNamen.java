@@ -12,9 +12,10 @@ import java.util.TreeMap;
  * @author Friedrich
  */
 public class VokabelmitGleichemNamen {
+
     private String mName;
-    private TreeMap<String,Vokabel> mVokabeln;
-    
+    private TreeMap<String, Vokabel> mVokabeln;
+
     public VokabelmitGleichemNamen(String mName) {
         this.mName = mName;
         mVokabeln = new TreeMap<>();
@@ -27,6 +28,5 @@ public class VokabelmitGleichemNamen {
     boolean add(Vokabel nVokabel) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-   
-    
+
 }

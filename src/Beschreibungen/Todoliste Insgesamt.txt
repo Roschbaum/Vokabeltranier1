@@ -1,0 +1,5 @@
+Funktion schreiben dass Ein Abbgraden auf eine Neuere Version des Programms zulässt.
+Erweiterung des Programms auf ein Abbhören mit beiden Richtungen.
+Erweiterung des Programms auf Statistiken.
+
+ 
