@@ -45,11 +45,13 @@ public class SControler extends aControler implements Serializable {
     private void bearbeiten() {
         switch (cmd) {
             case "bearbeiteVokabelkasten":
-                ErselleKasten erselleKasten = new ErselleKasten();
+                erstelleVokabelkasten();
                 break;
             case "bearbeiteVokabelfach":
+                erstelleVokabelfach();
                 break;
             case "bearbeiteVokabel":
+                erstelleVokabel();
                 break;
         }
     }
@@ -193,35 +195,16 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void erstelleVokabel() {
-        VokabelErstellen erstellen = new VokabelErstellen();
-        String name = erstellen.getEingabeName();
-        String zuastzangaben = erstellen.getEingabeZusatzangaben();
-        String bedeutung = erstellen.getEingabeBedeutung();
-        boolean vokabelkasten = erstellen.getBooleanVokabelkasten();
-        boolean heufig = erstellen.getBooleanHeufig();
-        if (erstellen.getEingabeRichtig()) {
-            erstelleVokabel(name, zuastzangaben, bedeutung, vokabelkasten, heufig);
-        }
-        erstellen.closeVokabeleingabe();
+        new VokabelErstellen(mVokabelliste);
     }
 
     private void erstelleVokabelfach() {
-        ErstelleFach erstelleFach = new ErstelleFach();
-        String name = erstelleFach.getVokabelFachName();
-        Vokabelkasten mVokabelkasten = bestimmeVokabelkasten();
-        if (erstelleFach.getEingabeRichtig()) {
-            mVokabelkasten.erzeugeFach(name);
-        }
-        erstelleFach.closeVokablfacheingabe();
+        new ErstelleFach(mVokabelliste);
     }
 
     private void erstelleVokabelkasten() {
-        ErselleKasten erselleKasten = new ErselleKasten();
-        String name = erselleKasten.getNameVokabelkasten();
-        if (erselleKasten.getEingabeRichtig()) {
-            mKasten.add(new Vokabelkasten(name, this));
-        }
-        erselleKasten.close();
+        new ErselleKasten(mVokabelliste);
+
     }
 
     private void hoereAb() {

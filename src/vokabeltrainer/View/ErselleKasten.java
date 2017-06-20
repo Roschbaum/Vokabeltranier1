@@ -5,7 +5,7 @@
  */
 package vokabeltrainer.View;
 
-import vokabeltrainer.Model.Vokabelkasten;
+import vokabeltrainer.Model.Vokabelliste;
 
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
@@ -15,47 +15,15 @@ import vokabeltrainer.Model.Vokabelkasten;
  */
 public class ErselleKasten {
 
-    private Vokabelkasten mVokabelkasten;
+    private Vokabelliste vokabelliste;
 
     /**
-     * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
-     * Erstellung eines Vokabelkastens nötig sind.
+     *  Erstellt ein Fenster in dem ein Vokabel Kasten erstellt werden oder Bearbeitet werden kann.
+     * @param vokabelliste
      */
-    public ErselleKasten() {
+    public ErselleKasten(Vokabelliste vokabelliste) {
+        this.vokabelliste = vokabelliste;
     }
-
-    /**
-     * Bietet die Möglichkeit einen Vokabelkasten zu bearbeiten
-     *
-     * @param mVokabel zu bearbeitender Vokabelkasten
-     */
-    public ErselleKasten(Vokabelkasten mVokabelkasten) {
-        this.mVokabelkasten = mVokabelkasten;
-    }
-
-    /**
-     * Schließt das Eingabefenster,
-     */
-    public void close() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    /**
-     * Gibt an ob die Eingabe korrekt verlaufen ist.
-     *
-     * @return
-     */
-    public boolean getEingabeRichtig() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    /**
-     * Gibt den Namen des Neuen Vokabelkasten zurück.
-     *
-     * @return
-     */
-    public String getNameVokabelkasten() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
 }

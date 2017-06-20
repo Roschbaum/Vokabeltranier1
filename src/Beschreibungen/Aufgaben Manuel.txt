@@ -1,6 +1,10 @@
 Passe wenn nötig die Actionlisener Structur in den Controlern und in Vokabelkasten an javafx an.
 Programiere die Toolbar 
 Setze die Entsprechenden AtionLisener
-Programiere die Erstellenfenster
+Programiere die Erstellenfenster 
+(Hier soltest du dir überlegen, ob du dazu für die Steuerung und die Darstellung nicht verschiedene Klassen verwendest und 
+diese jeweils in ein eigenes Paket zusammen fast.
+Ich würde dies vorziehen, da man so das ganzeübersichtlicher gestaltet. Das geiche gilt für die Löschenfenster.)
+Programiere die Löschenfenster
 Programiere das Abhöhren
 Programiere die Löschenfenster
