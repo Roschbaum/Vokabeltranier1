@@ -30,12 +30,12 @@ Situation waehrend des Abhaerens:
 �       Botton falsch:Actionevent:falsch
 
 Neue Fenster mit hoeherer Prioritaet für:
-o	Lösche Vokabelkasten
-o	Lösche Vokabelfach
-o	Lösche Vokabel
-o	Erstelle Vokabel
-o	Erstelle Vokabelfach
-o	Erstelle Vokabelkasten
+o	Bearbeite Vokabelkasten
+o	Bearbeite Vokabelfach
+o	Bearbeite Vokabel
+o	Löschen Vokabelkasten
+o	Löschen Vokabelfach
+o	Löschen Vokabel
 
 Funktionsweise der Serilisation im Bezug deiner View Manuel:
 � Deine View erzeugt einen Controler. Dieser Controler muss erzeugt werden, wenn man die Javaexecutebel zum ersten mal startet.

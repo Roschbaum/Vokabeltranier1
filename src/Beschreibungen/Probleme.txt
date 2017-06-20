@@ -1,0 +1,8 @@
+Datenstruktur passt nicht:
+    Die Anforderrungen sind:
+    o Schneller Zugriff
+    o Mapstruktur 
+    o Suche nach dem Auftreten von den Vokabeln, die einen bestimten Aufweisen. Es können verschieden Vokabeln mit dem gleichen Namen exestieren.
+Lösung: 
+    Einbau einer weiteren Ebene in die Vokabelliste, die als Box für alle Vokabeln mit diesm Namen gilt.
+    Eine Suche nach All de Vokabel, die mit einem bestimmten String anfangen ist so nicht möglich.

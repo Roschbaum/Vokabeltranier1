@@ -5,29 +5,26 @@
  */
 package vokabeltrainer.View;
 
-import vokabeltrainer.Model.Vokabel;
+import vokabeltrainer.Model.Vokabelliste;
 
 /**
  * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
- * Erstellung einer Vokabel nötig sind.
+ * Berbeitung/Erzeugen einer Vokabel nötig sind.
  *
  * @author Friedrich
  */
 public class VokabelErstellen {
-    Vokabel vokabel;
-    /**
-     * Erstellt ein Fenster mit den Eingabemöklichkeiten, Speichert diese,
-     * Registrierd ob die Eingabe richtig ist.
-     */
-    public VokabelErstellen() {
-    }
+
+    private Vokabelliste vokabelliste;
 
     /**
-     * Erstellt die Eingabemöcklichkeiten um eine Vokabel zu Bearbeiten.
-     * @param vokabel 
+     * Erstellt eiene Vokabelbeaarbeitenfenter, in dem mn eine Vokabel entweder berbeiten oder erstellen kann
+     *
+     * @param vokabelliste
+     * @param aktivitaet
      */
-    public VokabelErstellen(Vokabel vokabel) {
-        this.vokabel = vokabel;
+    public VokabelErstellen(Vokabelliste vokabelliste) {
+        this.vokabelliste = vokabelliste;
     }
 
     /**
