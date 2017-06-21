@@ -3,27 +3,26 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vokabeltrainer.View;
+package vokabeltrainer.View.Loeschen;
 
 import vokabeltrainer.Model.Vokabelliste;
 
 /**
- * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
- * Erstellung eines Vokabelfaches nötig sind.
+ * Diese Klasse erstellt ein Fenster zum Loeschen eines Vokabelfaches. Sie regelt
+ * sämtiche Abläufe die damit verbunden sind
  *
  * @author Friedrich
  */
-public class ErselleKasten {
+public class LoescheFach extends LoeschenFenster{
 
     private Vokabelliste vokabelliste;
 
     /**
-     * Erstellt ein Fenster in dem ein Vokabel Kasten erstellt werden oder
-     * Bearbeitet werden kann.
+     * Erstellt ein Fenster
      *
      * @param vokabelliste
      */
-    public ErselleKasten(Vokabelliste vokabelliste) {
+    public LoescheFach(Vokabelliste vokabelliste) {
         this.vokabelliste = vokabelliste;
     }
 

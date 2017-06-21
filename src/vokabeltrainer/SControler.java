@@ -1,5 +1,11 @@
 package vokabeltrainer;
 
+import vokabeltrainer.View.Loeschen.LoescheVokabel;
+import vokabeltrainer.View.Loeschen.LoescheKasten;
+import vokabeltrainer.View.Loeschen.LoescheFach;
+import vokabeltrainer.View.Erstellen.VokabelErstellen;
+import vokabeltrainer.View.Erstellen.ErstelleFach;
+import vokabeltrainer.View.Erstellen.ErselleKasten;
 import Speichern.Speichern;
 import java.io.Serializable;
 import static java.lang.System.exit;
@@ -69,17 +75,18 @@ public class SControler extends aControler implements Serializable {
     }
 
     /**
-     * Löscht den vom Benutzer noch zu bestimenden Vokabelkasten.
+     * Loescht den vom Benutzer noch zu bestimenden Vokabelkasten.
      */
     public void loescheVokabelkasten() {
-        new LöscheKasten(mVokabelliste);
+        new LoescheKasten(mVokabelliste);
     }
 
     /**
      * Zeigt die Bedeutung einer Vokabel wenn dies vom Benutzer verlagt wird.
      *
      * @param v Vokabel deren Bedeutung gezeichnet werden soll
-     * @return
+     * @return 1 wenn die Bedeutung gezeichnet werden sollte 0 wenn abgebrochen
+     * worden ist.
      */
     public int zeichneBedeutung(Vokabel v) {
         warteAufEvent();
@@ -97,8 +104,9 @@ public class SControler extends aControler implements Serializable {
     /**
      * Zeichnet die Zusatzangaben einer Vokabel
      *
-     * @param v
-     * @return
+     * @param v Vokabel deren zusatzangaben gezeichnet werden
+     * @return 0 wenn Das zeichnen Abgebrochen worden ist. 1 wenn die
+     * Zustzangaben gezeichnet werden sollen
      */
     public int zeichneZusatzangaben(Vokabel v) {
         warteAufEvent();
@@ -188,11 +196,11 @@ public class SControler extends aControler implements Serializable {
     }
 
     private void loescheVokabel() {
-        new LöscheVokabel();
+        new LoescheVokabel();
     }
 
     private void loescheVokabelfach() {
-        new LöscheFach(mVokabelliste);
+        new LoescheFach(mVokabelliste);
     }
 
     private void loeschen() {

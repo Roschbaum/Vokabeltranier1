@@ -3,26 +3,27 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vokabeltrainer.View;
+package vokabeltrainer.View.Erstellen;
 
 import vokabeltrainer.Model.Vokabelliste;
 
 /**
- * Diese Klasse erstellt ein Fenster zum Löschen eines Vokabelfaches. Sie regelt
- * sämtiche Abläufe die damit verbunden sind
+ * Erstellt die Eingabemoeglichkeit und speichert die Eingaben die für die
+ * Erstellung eines Vokabelfaches noetig sind.
  *
  * @author Friedrich
  */
-public class LöscheFach {
+public class ErselleKasten extends ErstellenFenster{
 
     private Vokabelliste vokabelliste;
 
     /**
-     * Erstellt ein Fenster
+     * Erstellt ein Fenster in dem ein Vokabel Kasten erstellt werden oder
+     * Bearbeitet werden kann.
      *
      * @param vokabelliste
      */
-    public LöscheFach(Vokabelliste vokabelliste) {
+    public ErselleKasten(Vokabelliste vokabelliste) {
         this.vokabelliste = vokabelliste;
     }
 

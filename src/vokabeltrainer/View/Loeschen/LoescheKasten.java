@@ -3,20 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vokabeltrainer.View;
+package vokabeltrainer.View.Loeschen;
 
 import vokabeltrainer.Model.Vokabelliste;
 
 /**
- *
+ *  Diese Klasse dient der Steuerung und Ausführung der Prozesse zum Loeschen eines Vokabelkastens
  * @author Friedrich
  */
-public class LöscheKasten {
+public class LoescheKasten extends LoeschenFenster{
 
     private Vokabelliste vokabelliste;
 
-    public LöscheKasten(Vokabelliste vokabelliste) {
+    public LoescheKasten(Vokabelliste vokabelliste) {
         this.vokabelliste = vokabelliste;
     }
 
+    
 }

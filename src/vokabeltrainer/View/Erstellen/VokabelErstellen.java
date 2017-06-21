@@ -3,17 +3,18 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package vokabeltrainer.View;
+package vokabeltrainer.View.Erstellen;
 
+import vokabeltrainer.View.Erstellen.ErstellenFenster;
 import vokabeltrainer.Model.Vokabelliste;
 
 /**
- * Erstellt die Eingabemöglichkeit und speichert die Eingaben die für die
- * Berbeitung/Erzeugen einer Vokabel nötig sind.
+ * Erstellt die Eingabemoeglichkeit und speichert die Eingaben die für die
+ * Berbeitung/Erzeugen einer Vokabel noetig sind.
  *
  * @author Friedrich
  */
-public class VokabelErstellen {
+public class VokabelErstellen extends ErstellenFenster{
 
     private Vokabelliste vokabelliste;
 

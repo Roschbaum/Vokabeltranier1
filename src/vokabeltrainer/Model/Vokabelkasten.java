@@ -58,7 +58,7 @@ public class Vokabelkasten implements Serializable {
     }
 
     /**
-     * Entvernt das Vokabelfach mit der zugehörigen nummer.
+     * Entvernt das Vokabelfach mit der zugehoerigen nummer.
      *
      * @param stelle
      */
@@ -89,7 +89,7 @@ public class Vokabelkasten implements Serializable {
     }
 
     /**
-     * Gibt die Lönge
+     * Gibt die Loenge
      * @return
      */
     public int getLaenge() {
