@@ -3,7 +3,7 @@
  *  Alle Recht vor behalten
  *  nur fuer den privaten Gebrauch freigegeben.
  */
- package Speichern;
+package Speichern;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -14,15 +14,12 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import static java.lang.System.out;
 
-
 /**
  *
  * @author Friedrich
  */
 public class Speichern implements Serializable {
-    /**
-     * @param args the command line arguments
-     */
+
     private final String datnam = "hallo.ser";
 
     /**
@@ -32,11 +29,12 @@ public class Speichern implements Serializable {
     }
 
     /**
-     *  Speichert das ubergebene Objekt.
+     * Speichert das ubergebene Objekt.
+     *
      * @param nObject zuspeicherndes Objekt.
      */
     public void speichern(Object nObject) {
-      
+
         out.println("vokabeltrainernet.main()");
         ObjectOutputStream aus = null;
         try {
@@ -54,7 +52,12 @@ public class Speichern implements Serializable {
             }
         }
     }
-    public Object oeffnen(){
+
+    /**
+     *
+     * @return
+     */
+    public Object oeffnen() {
         ObjectInputStream in = null;
         Object mObject = null;
         try {

@@ -7,6 +7,10 @@ import javax.swing.*;
 import vokabeltrainer.Model.Vokabel;
 import vokabeltrainer.SControler;
 
+/**
+ *
+ * @author Friedrich
+ */
 public class View extends JFrame implements Serializable {
 
     private final SControler mController;
@@ -17,6 +21,9 @@ public class View extends JFrame implements Serializable {
 
     private final int y;
 
+    /**
+     *
+     */
     public View() {
         this.mController = new SControler(this);
         x = 800;
@@ -51,18 +58,37 @@ public class View extends JFrame implements Serializable {
         mItem.setVisible(true);
     }
 
+    /**
+     *
+     * @param v
+     */
     public void zeichneVokabel(Vokabel v) {
     }
 
+    /**
+     *
+     * @param v
+     */
     public void zeichneZusatangaben(Vokabel v) {
     }
 
+    /**
+     *
+     * @param v
+     */
     public void zeichneBedeutung(Vokabel v) {
     }
 
+    /**
+     *
+     * @param es_sind_keine_Vokabeln_mehr_in_dem_Fach
+     */
     public void zeige(String es_sind_keine_Vokabeln_mehr_in_dem_Fach) {
     }
 
+    /**
+     *
+     */
     public void fensterErstellen() {
         richteFrameEin();
         richteMenuBarein();

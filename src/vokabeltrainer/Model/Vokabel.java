@@ -8,17 +8,11 @@ import java.io.Serializable;
 public class Vokabel implements Serializable {
 
     private String mName;
-
     private String bedeutung;
-
     private String zusatsAngaben;
-
-    private Double richtig;
-
-    private Double aufrufe = 0.0;
-
+    private double richtig;
+    private double aufrufe = 0.0;
     private boolean vokabelkasten;
-
     private boolean heufig;
 
     /**
@@ -65,20 +59,32 @@ public class Vokabel implements Serializable {
     /**
      * Gibt die Bedeutung der Vokabel zurück
      *
-     * @return
+     * @return Nam der Vokabel
      */
     public String getBedeutung() {
         return bedeutung;
     }
 
+    /**
+     *
+     * @param mName
+     */
     public void setmName(String mName) {
         this.mName = mName;
     }
 
+    /**
+     *
+     * @param bedeutung
+     */
     public void setBedeutung(String bedeutung) {
         this.bedeutung = bedeutung;
     }
 
+    /**
+     *
+     * @param zusatsAngaben
+     */
     public void setZusatsAngaben(String zusatsAngaben) {
         this.zusatsAngaben = zusatsAngaben;
     }
@@ -93,7 +99,8 @@ public class Vokabel implements Serializable {
     }
 
     /**
-     *  Anzahl der richtigen beantwortungen werden zurückgegeben.
+     * Anzahl der richtigen beantwortungen werden zurückgegeben.
+     *
      * @return anzahl der Antworten
      */
     public Double getRichtig() {
@@ -102,13 +109,16 @@ public class Vokabel implements Serializable {
 
     /**
      * Anzajl der Aufrufe wird zurückgegeben.
+     *
      * @return
      */
     public Double getAufrufe() {
         return aufrufe;
     }
+
     /**
      * gibtzurück ob sich die Vokabel in eiem Vokabelkasten befindet
+     *
      * @return
      */
     public boolean isVokabelkasten() {
@@ -117,6 +127,7 @@ public class Vokabel implements Serializable {
 
     /**
      * Bestimmt ob sich die Vokabel un eiem Vokabelkasten befindet.
+     *
      * @param vokabelkasten
      */
     public void setVokabelkasten(boolean vokabelkasten) {
@@ -125,6 +136,7 @@ public class Vokabel implements Serializable {
 
     /**
      * Gibt den Durchschnit der richtigen Antworten für die Vokabel wieders.
+     *
      * @return
      */
     public Double gibdurchscnitt() {

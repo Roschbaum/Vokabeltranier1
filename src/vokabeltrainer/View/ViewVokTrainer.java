@@ -9,8 +9,16 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.stage.Stage;
 
+/**
+ *
+ * @author Friedrich
+ */
 public class ViewVokTrainer extends Application implements Serializable {
 
+    /**
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         launch(args);
     }
@@ -45,6 +53,9 @@ public class ViewVokTrainer extends Application implements Serializable {
         primaryStage.show();
     }
 
+    /**
+     *
+     */
     public void applicationBeenden() {
         Boolean antwort = ConfirmBox.anzeigen();
         if (antwort) {
@@ -52,6 +63,9 @@ public class ViewVokTrainer extends Application implements Serializable {
         }
     }
 
+    /**
+     *
+     */
     public void applicationAnmelden() {
         PasswortBox.anzeigen();
     }

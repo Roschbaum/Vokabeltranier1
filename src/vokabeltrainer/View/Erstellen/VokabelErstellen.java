@@ -5,7 +5,6 @@
  */
 package vokabeltrainer.View.Erstellen;
 
-import vokabeltrainer.View.Erstellen.ErstellenFenster;
 import vokabeltrainer.Model.Vokabelliste;
 
 /**
@@ -14,7 +13,7 @@ import vokabeltrainer.Model.Vokabelliste;
  *
  * @author Friedrich
  */
-public class VokabelErstellen extends ErstellenFenster{
+public class VokabelErstellen extends ErstellenFenster {
 
     private Vokabelliste vokabelliste;
 
@@ -23,7 +22,6 @@ public class VokabelErstellen extends ErstellenFenster{
      * berbeiten oder erstellen kann
      *
      * @param vokabelliste
-     * @param aktivitaet
      */
     public VokabelErstellen(Vokabelliste vokabelliste) {
         this.vokabelliste = vokabelliste;
