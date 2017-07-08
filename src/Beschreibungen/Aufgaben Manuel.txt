@@ -1,4 +1,6 @@
 Passe wenn nötig die Actionlisener Structur in den Controlern und in Vokabelkasten an javafx an.
+Programier die Wechsel der Scenen so, dass man nicht das Fenster An den Volbildmodus anpassen muss,
+damit die neue Scene sichtbar wird.
 Programiere die Toolbar 
 Setze die Entsprechenden AtionLisener
 Programiere die Erstellenfenster 
